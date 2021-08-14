@@ -1,0 +1,8 @@
+API,x-api-key,request,response,statuscode
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,uyrHSRisQ41vZlf0li8OC5c8q6yNGuUP7o6I6w33,"{""inputText"":""Hello""}","{""LanguageCode"":""en""}",200
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,uyrHSRisQ41vZlf0li8OC5c8q6yNGuUP7o6I6w34,"{""inputText"":""Hola""}","{""LanguageCode"":""es""}",200
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,uyrHSRisQ41vZlf0li8OC5c8q6yNGuUP7o6I6w35,"{""inputText"":""asnl""}","{""LanguageCode"":""None""}",200
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,uyrHSRisQ41vZlf0li8OC5c8q6yNGuUP7o6I6w36,"{""op"":""Hello""}","{""LanguageCode"":""None""}",200
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,invalidxapikey,"{""inputText"":""Hello""}","{""message"":""Forbidden""}",403
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,uyrHSRisQ41vZlf0li8OC5c8q6yNGuUP7o6I6w33,"{""inputText"":""Bonjour vas-tu""}","{""LanguageCode"":""fr""}",200
+https://gbzproiabc.execute-api.us-west-2.amazonaws.com/dev/v1/languages/codes,invalidxapikey,"{""inputText"":""""}","{""LanguageCode"":""None""}",200

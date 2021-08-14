@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "2f08ccb7-70c6-4311-9842-a7300d6f1a00",
+		"name": "Language Detection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Language Detection API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code test case result\", function () {\r",
+							"  pm.response.to.have.status(data[\"statuscode\"]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response Body test case result\", () => {\r",
+							"    const apiResponse = pm.response.json();\r",
+							"    console.log(\"apiResponse: \", apiResponse);\r",
+							"    var expectedResponse = data['response'];\r",
+							"    console.log(\"expectedResponse: \", JSON.parse(expectedResponse));\r",
+							"    expectedResponse = JSON.parse(expectedResponse);\r",
+							"    pm.expect(apiResponse).to.eql(expectedResponse);\r",
+							"   // var value = data['responsevalue'];\r",
+							"    // var expectedResp = {\r",
+							"    //     [key] : value\r",
+							"    // };\r",
+							"   // console.log(\"expectedResp: \", expectedResp);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{request}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API}}",
+					"host": [
+						"{{API}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API",
+			"value": "xx"
+		},
+		{
+			"key": "request",
+			"value": "xx"
+		},
+		{
+			"key": "response",
+			"value": "xx"
+		},
+		{
+			"key": "statuscode",
+			"value": "xx"
+		},
+		{
+			"key": "x-api-key",
+			"value": "xx"
+		}
+	]
+}
